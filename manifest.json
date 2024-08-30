@@ -1,0 +1,17 @@
+{
+  "name": "Alive Church - Spiritual Pulse",
+  "short_name": "Spiritual Pulse",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "yellow",
+  "theme_color": "blue",
+  "scope": ".",
+  "description": "Keep track of where you are in you spiritual life.",
+  "icons": [
+    {
+      "src": "images/icon.jpg",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

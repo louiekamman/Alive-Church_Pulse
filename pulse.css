@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow-x: auto;
+  min-width: 320px;
+  background: #fff;
+}
+
+#header {
+  margin-top: 27px;
+  margin-left: 8px;
+}
+
+#left-menu {
+  height: 100%;
+  margin-top: -16px;
+  padding: 20px;
+  background-color: #17748b;
+}
+
+.nav-pills {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.nav-pills:hover {
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+  padding: 5px;
+}
+
+.hiddenlist {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+li {
+  padding: 5px;
+}
