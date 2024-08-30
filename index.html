@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alive Church - My Spiritual Pulse</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Spiritual Pulse</h1>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">Name:</div>
+            <div class="col-sm-3"><input type="text" /></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">Date:</div>
+            <div class="col-sm-3"><input type="text" /></div>
+        </div>
+        <div class="row">&nbsp;</div>
+        Rate your current status in each category from 1 - 10 (10 being the best).<br />
+        <div class="row">
+            <div id='values' class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6">Faith:<br />Walk with God</div>
+                    <div class="col-sm-1"><input type="number" id="valFaith" /></div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">Family:<br />Marriage & Family</div>
+                    <div class="col-sm-1"><input type="number" id="valFamily" /></div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">Fellowship:<br />Biblical Community</div>
+                    <div class="col-sm-1"><input type="number" id="valFellowship" /></div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">Fitness:<br />Health & Nutritution</div>
+                    <div class="col-sm-1"><input type="number" id="valFitness" /></div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">Finances:<br />Personal Stewardship</div>
+                    <div class="col-sm-1"><input type="number" id="valFinances" /></div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">Fun:<br />Friends & Recreation</div>
+                    <div class="col-sm-1"><input type="number" id="valFun" /></div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">Feelings:<br />Emotional Health</div>
+                    <div class="col-sm-1"><input type="number" id="valFeelings" /></div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">Future:<br />Outlook & Goals</div>
+                    <div class="col-sm-1"><input type="number" id="valFuture" /></div>
+                </div>
+            </div>
+            <div id='chart' class="col-sm-6">
+                <canvas id="myChart"></canvas>
+                It looks like you are low in ?????
+                Enter your email below and we will send you some resources.
+                <input />
+            </div>
+        </div>
+        <hr>
+        <h2>Next Steps</h2>
+        <div class="row">
+            What 3 areas would you like to improve?
+        </div>
+        <div class="row">
+            <ul>
+                <li><input></input></li>
+                <li><input></input></li>
+                <li><input></input></li>
+            </ul>
+        </div>
+        <div class="row">
+            What are tangible, accountable action steps for each of these you can take?
+        </div>
+        <ul>
+            <li>
+                <textarea rows="3"></textarea>
+            </li>
+            <li>
+                <textarea rows="3"></textarea>
+            </li>
+            <li>
+                <textarea rows="3"></textarea>
+            </li>
+        </ul>
+        <hr>
+        <h2>God Stories</h2>
+        <div class="row">
+            Share answered prayers, praise reports, testimonies, or gratitude.
+        </div>
+        <div class="row">
+            <textarea rows="6"></textarea>
+        </div>
+        <hr>
+        <h2>Prayer Requests</h2>
+        <div class="row">
+            <div class="col-sm-3">
+                Name
+            </div>
+            <div class="col-sm-9">
+                Requests
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"><input /></div>
+            <div class="col-sm-9"><input /></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"><input /></div>
+            <div class="col-sm-9"><input /></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"><input /></div>
+            <div class="col-sm-9"><input /></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"><input /></div>
+            <div class="col-sm-9"><input /></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"><input /></div>
+            <div class="col-sm-9"><input /></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"><input /></div>
+            <div class="col-sm-9"><input /></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"><input /></div>
+            <div class="col-sm-9"><input /></div>
+        </div>
+        <hr>
+        <h3>Worshipping</h3>
+        <div class="row">
+            Faithfully (weekly) worshiping with my Church
+        </div>
+        <div class="row">
+            Regulary (daily) worshiping personally
+        </div>
+        <h3>Learning</h3>
+        <div class="row">
+            Active in a Bible study or Group
+        </div>
+        <div class="row">
+            Reading/listening for personal growth
+        </div>
+        <h3>Giving</h3>
+        <div class="row">
+            Tithing 10% of my income to my Church
+        </div>
+        <div class="row">
+            Generously giving other offerings?
+        </div>
+        <h3>Serving</h3>
+        <div class="row">
+            Being used of God in outreach to my Community
+        </div>
+        <div class="row">
+            Fulfilling my role(s) in my Church
+        </div>
+        <hr>
+        <h2>My BHAG's for this year</h2> (Big Holy Anoined Goals)
+        <hr>
+        <h2>Hot List for this month</h2> (short-term, achievable "to do" items)
+        <hr>
+        <h2>My Personal Accountability Group Members</h2>
+        <ul>
+            <li>
+                <input type="text" />
+            </li>
+            <li>
+                <input type="text" />
+            </li>
+            <li>
+                <input type="text" />
+            </li>
+            <li>
+                <input type="text" />
+            </li>
+        </ul>
+        <hr>
+        <h2>When/Where We Will Meet</h2>
+        Where: <input>
+        When: <input>
+        How often:
+        <Select>
+            <option>Daily</option>
+            <option>Weekly</option>
+            <option>Bi-weekly</option>
+            <option>Monthly</option>
+        </Select>
+        <hr>
+        <h2>Accountability Questions</h2>
+        <ol>
+            <li>Have you spent daily time in the Word and in prayer?</li>
+            <li>Have you viewed inapproprate sequal images, had unwholesome thoughts, flirtatious attitudes, or lustful
+                temptations?</li>
+            <li>Are you glorifying God as a good stewards in all you financial dealings, including tithes and offerings?
+            </li>
+            <li>Are you giving you best at work, at school, at church?</li>
+            <li>Have you spent quality time iwht you family and friends?</li>
+            <li>Are you entertaining unhealthy obsessions, addictions, laziness, or bad habits?</li>
+            <li>Have you shared the gosppel with anyone this week?</li>
+            <li>Have you exercised, slept, and eaten properly?</li>
+            <li>Have you allowed any person or circumstance to rob you of your joy?</li>
+            <li>Have you lied to us on any of your answers today?</li>
+        </ol>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var ctx = document.getElementById('myChart');
+
+    const data = {
+        labels: [
+            'Faith: Walk with God',
+            'Family: Marriage & Family',
+            'Fellowship: Biblical Community',
+            'Fitness: Health & Nutritution',
+            'Finances: Personal Stewardship',
+            'Fun: Friends & Recreation',
+            'Feelings: Emotional Health',
+            'Future: Outlook & Goals'
+        ],
+        datasets: [{
+            label: 'Previous Ratings',
+            data: [6, 5, 9, 8, 5, 5, 4, 2],
+            fill: true,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgb(255, 99, 132)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(255, 99, 132)'
+        }, {
+            label: 'Current Ratings',
+            data: [0, 0, 0, 0, 0, 0, 0, 0],
+            fill: true,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgb(54, 162, 235)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(54, 162, 235)'
+        }]
+    };
+
+    const config = {
+        type: 'radar',
+        data: data,
+        options: {
+            elements: {
+                line: {
+                    borderWidth: 3
+                }
+            }
+        },
+    };
+
+    var myChart = new Chart(ctx, config);
+
+    $("document").ready(function () {
+        myChart.hide(0);
+    });
+
+    $("#valFaith").change(function () {
+        myChart.data.datasets[1].data[0] = $(this).val();
+        myChart.update();
+    });
+
+    $("#valFamily").change(function () {
+        myChart.data.datasets[1].data[1] = $(this).val();
+        myChart.update();
+    });
+
+    $("#valFellowship").change(function () {
+        myChart.data.datasets[1].data[2] = $(this).val();
+        myChart.update();
+    });
+
+    $("#valFitness").change(function () {
+        myChart.data.datasets[1].data[3] = $(this).val();
+        myChart.update();
+    });
+
+    $("#valFinances").change(function () {
+        myChart.data.datasets[1].data[4] = $(this).val();
+        myChart.update();
+    });
+
+    $("#valFun").change(function () {
+        myChart.data.datasets[1].data[5] = $(this).val();
+        myChart.update();
+    });
+
+    $("#valFeelings").change(function () {
+        myChart.data.datasets[1].data[6] = $(this).val();
+        myChart.update();
+    });
+
+    $("#valFuture").change(function () {
+        myChart.data.datasets[1].data[7] = $(this).val();
+        myChart.update();
+    });
+</script>
